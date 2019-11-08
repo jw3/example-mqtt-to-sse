@@ -19,8 +19,7 @@ trait HttpInterface {
         complete(OK)
       }
     } ~
-    pathPrefix("topics") {
-      path("topic" / Segment) { topic =>
+      path("topics" / Segment) { topic =>
         get {
           extractRequest { r =>
             complete {
@@ -31,5 +30,4 @@ trait HttpInterface {
           }
         }
       }
-    }
 }
